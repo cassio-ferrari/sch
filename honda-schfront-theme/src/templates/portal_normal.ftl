@@ -45,7 +45,7 @@
 		</div>
 		data-target="#multiCollapseExample2" 
 		-->
-		<hr>
+		
 		<div class="col-2">
 			<div class="row">
 				<div class="col">
@@ -68,20 +68,22 @@
 <div class="container mt-0 pt-0 px-0 menu-lateral corpo-conteudo" id="wrapper">
 	<section id="content" class="corpo-conteudo">
 		<div id="honda-topo">
-				<img src="${images_folder}/layout_set_logo.png" alt="" class="honda-topo_esquerda">
-				<div class="honda-topo_direita">
-					<#if is_signed_in>
-						<div class="flex-column nav-userbar__title">
-							<p>${user_first_name} ${user_last_name}</p>
-							<p class="nav-userbar__sub">HND Dealer S.A.</p>
-						</div>
-					<#else>
-						<p>Olá, convidado.</p>
-					</#if>
+			<img src="${images_folder}/layout_set_logo.png" alt="" class="honda-topo_esquerda">
+			<div class="honda-topo_direita">
+				<#if is_signed_in>
+					<div class="flex-column nav-userbar__title">
+						<p>${user_first_name} ${user_last_name}</p>
+						<p class="nav-userbar__sub">HND Dealer S.A.</p>
+					</div>
+				<#else>
+					<p>Olá, convidado.</p>
+				</#if>
 
-					<@liferay.user_personal_bar />
-				</div>
-				<hr>
+				<@liferay.user_personal_bar />
+			</div>
+		</div>
+		<div id="hr">
+			<hr>
 		</div>
 		<div id="honda-conteudo-section">
 			<h1 class="hide-accessible">${the_title}</h1>

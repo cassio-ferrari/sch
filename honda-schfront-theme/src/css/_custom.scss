@@ -173,15 +173,35 @@ body {
 
   .height-full{
     height: 100vh;
+    overflow: hidden;
   }
   .botao-fechar-menu{
     color: #F1F2F5;
     font-size: 15px;
+    overflow: hidden;
+  }
+  #hr{
+    height: 3px;
+  }
+  #honda-topo{
+    height: 68px;
+    overflow: hidden;
   }
   .honda-topo_esquerda{
     float: left;
+    overflow: hidden;
   }
+  img.honda-topo_esquerda{
+    width: 15%;
+    overflow: hidden;
+  }
+
   .honda-topo_direita{
     float: right;
+    overflow: hidden;
+  }
+  #honda-conteudo-section{
+    margin-top: 2px;
+    overflow: hidden;
   }
 }
