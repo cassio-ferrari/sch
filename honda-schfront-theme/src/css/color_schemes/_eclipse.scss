@@ -1,0 +1,47 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@import '../colors';
+
+body.eclipse {
+  
+  a.btn-orange {
+    background-color: $honda-sch-eclipse-yellow;
+  }
+
+  header {
+    background-color: $honda-sch-eclipse-red;
+
+    .user-avatar-link .lexicon-icon {
+      color: $honda-sch-eclipse-red;
+    }
+    
+    li.nav-item {
+      
+      ul.child-menu {
+        background-color: $honda-sch-eclipse-red;
+      }
+      
+      &:hover ul.child-menu {
+        background-color: $honda-sch-eclipse-red;
+      }
+      
+      &.selected {
+        & a.nav-link {
+          color: $honda-sch-eclipse-red;
+          &:hover {
+            color: $honda-sch-eclipse-red;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    background-color: $honda-sch-eclipse-red;
+  }
+
+}

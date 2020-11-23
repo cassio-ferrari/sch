@@ -1,0 +1,187 @@
+/* These inject tags are used for dynamically creating imports for themelet styles, you can place them where ever you like in this file. */
+
+/* inject:imports */
+/* endinject */
+
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@import 'colors';
+@import "color_schemes/eclipse";
+
+body {
+  height: 100vh;
+  a.btn-orange {
+    background-color: $honda-sch-orange;
+    margin-right: 5px;
+    
+    &:hover {
+      border-color: $white;
+    }
+    
+    @include media-breakpoint-down(sm){
+      width: 100%;
+    }
+  }
+
+  header {
+    background-color: $honda-sch-blue;
+    
+    .lunar-user a {
+        color: $honda-sch-link-teal;
+    }
+
+    .user-avatar-link .lexicon-icon {
+      color: $honda-sch-blue;
+    }
+    
+    li.nav-item {
+      
+      & a.nav-link span {
+        font-size: 1.5em;
+      }
+      
+      &:hover ul.child-menu {
+        background-color: $honda-sch-blue;
+        display: block;
+        margin-top: -10px;
+      }
+      
+      &.selected {
+        background-color: $white;
+        height: 73px;
+        & a.nav-link {
+          color: $honda-sch-blue;
+          font-weight: bold;
+          &:hover {
+            color: $honda-sch-blue;
+            font-weight: normal;
+            padding-left: 9.619px;
+            padding-right: 9.619px;
+          }
+        }
+      }
+      
+      @include media-breakpoint-down(sm){
+        ul.child-menu {
+          display: block;
+        }
+      }
+      
+    }
+  }
+
+  #footer {
+    background-color: $honda-sch-blue;
+    color: $white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 10%;
+    ul{
+      margin-left: auto;
+      margin-right: auto;
+
+      &.navbar-nav {
+        width: 410px;  
+        .nav-item.hover:after {
+          width: auto;
+        }
+        
+        a {
+          color: $white;
+          @include media-breakpoint-down(sm){
+            padding-left: 6px;
+            padding-right: 6px;
+          }
+        }
+      }
+    }
+    
+    #socialMediaWrapper ul {
+      width: 192px;
+      
+      li a {
+        font-size: 2rem;
+      }
+    }
+    
+    p.powered-by a, .contact-info-container a {
+        color: $honda-sch-link-teal;
+    }
+
+  }
+
+  &.has-control-menu {
+   header {
+     margin-top: 56px;  
+     @include media-breakpoint-down(sm){
+       margin-top: 48px;
+     }
+   }
+  }
+
+  .menu-lateral{
+    float : left;
+  }
+
+  .corpo-conteudo{
+    margin-top: 57px;
+    margin-left: 30px;
+  }
+  
+  .font-menu-fechar{
+    width: 2.5%;
+    border: 0;
+    background-color: $honda-sch-dark;
+    margin-bottom: 5px;
+    font-size: 18px;
+    color: #F1F2F5;
+    position: absolute;
+    top: 57px;
+    left: 0px;
+    z-index: 1;
+  }
+  .font-menu-fechar img{
+    width: 180%;
+    margin-left: -45%;
+  }
+
+  .menu-item-fundo{
+    height: 100%;
+  }
+
+  .menu-item{
+    color: rgba(241, 242, 245, 0.76);
+    background-color: black;
+  }
+  a:link .menu-item {
+    background-color: black;
+    color: rgba(241, 242, 245, 0.76);
+  }
+  a:visited .menu-item {
+    background-color: black;
+    color: rgba(241, 242, 245, 0.76);
+  }
+  a:hover .menu-item {
+    background-color: black;
+    color: rgba(241, 242, 245, 0.76);
+  } 
+  a:active .menu-item {
+    background-color: black;
+    color: rgba(241, 242, 245, 0.76);
+  }
+
+  .height-full{
+    height: 100vh;
+  }
+  .botao-fechar-menu{
+    color: #F1F2F5;
+    font-size: 15px;
+  }
+  .honda-topo_esquerda{
+    float: left;
+  }
+  .honda-topo_direita{
+    float: right;
+  }
+}
