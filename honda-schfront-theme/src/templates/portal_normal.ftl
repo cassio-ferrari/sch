@@ -67,20 +67,46 @@
 
 <div class="container mt-0 pt-0 px-0 menu-lateral corpo-conteudo" id="wrapper">
 	<section id="content" class="corpo-conteudo">
-		<div id="honda-topo">
-			<img src="${images_folder}/layout_set_logo.png" alt="" class="honda-topo_esquerda">
-			<div class="honda-topo_direita">
-				<#if is_signed_in>
-					<div class="flex-column nav-userbar__title">
-						<p>${user_first_name} ${user_last_name}</p>
-						<p class="nav-userbar__sub">HND Dealer S.A.</p>
+		<div>
+<!-- inicio logo e usuário-->
+			<div class="container ">
+				<div class="align-items-center autofit-row">
+					<a class="${logo_css_class} align-items-center d-md-inline-flex d-sm-none d-none logo-md" href="${site_default_url}" title="<@liferay.language_format arguments="" key="go-to-x" />">
+						<img alt="${logo_description}" class="mr-2" height="56" src="${site_logo}" />
+		
+						<#if show_site_name>
+							<h2 class="font-weight-bold h2 mb-0 text-dark" role="heading" aria-level="1">${site_name}</h2>
+						</#if>
+					</a>
+		
+					<#assign preferences = freeMarkerPortletPreferences.getPreferences({"portletSetupPortletDecoratorId": "barebone", "destination": "/search"}) />
+		
+					<div class="autofit-col autofit-col-expand">
+						<#--  <#if show_header_search>
+							<div class="justify-content-md-end mr-4 navbar-form" role="search">
+								<@liferay.search_bar default_preferences="${preferences}" />
+							</div>
+						</#if>  -->
 					</div>
-				<#else>
-					<p>Olá, convidado.</p>
-				</#if>
-
-				<@liferay.user_personal_bar />
+		
+					<div class="autofit-col nav-userbar">
+						<div>
+							<#if is_signed_in>
+								<div class="flex-column nav-userbar__title menu-lateral">
+									<span>${user_first_name} ${user_last_name}</span><br/>
+									<span class="hnd-dealer">HND Dealer S.A.</span>
+								</div>
+							<#else>
+								<p>Olá, convidado.</p>
+							</#if>
+							<div class="menu-lateral-direita">
+								<@liferay.user_personal_bar />
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
+<!-- fim logo e usuário-->		
 		</div>
 		<div id="hr">
 			<hr>
@@ -101,6 +127,7 @@
 			</#if>
 		</div>
 	</section>
+<!-- Teste itens Roberta-->
 
 	<#if show_footer>
 		<#include "${full_templates_path}/footer.ftl" />
