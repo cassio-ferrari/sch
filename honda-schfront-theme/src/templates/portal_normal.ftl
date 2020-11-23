@@ -28,12 +28,10 @@
 			data-target="#multiCollapseExample2" 
 			aria-expanded="false" 
 			aria-controls="multiCollapseExample2">
-			<img src="${images_folder}/menu_icon.png"/>
-
-			
+			<img src="${images_folder}/menu_icon.png"/>		
 	</button>
 <header class="${header_css_class} menu-lateral flex-column height-full">
-	<div class="container-fluid menu-lateral teste" id="banner" role="banner">
+	<div class="container-fluid menu-lateral lista-menus" style="margin-top: -600px;" id="banner" role="banner">
 		<!--
 		<div>
 			<a class="${logo_css_class} navbar-brand" href="${site_default_url}" title="<@liferay.language_format arguments="${site_name}" key="go-to-x" />">

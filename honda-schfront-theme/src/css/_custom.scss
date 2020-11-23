@@ -153,22 +153,28 @@ body {
   .menu-item{
     color: rgba(241, 242, 245, 0.76);
     background-color: black;
+    font-size: 12px;
   }
+
   a:link .menu-item {
     background-color: black;
     color: rgba(241, 242, 245, 0.76);
+    font-size: 14px;
   }
   a:visited .menu-item {
     background-color: black;
     color: rgba(241, 242, 245, 0.76);
+    font-size: 14px;
   }
   a:hover .menu-item {
     background-color: black;
     color: rgba(241, 242, 245, 0.76);
+    font-size: 14px;
   } 
   a:active .menu-item {
     background-color: black;
     color: rgba(241, 242, 245, 0.76);
+    font-size: 14px;
   }
 
   .height-full{
